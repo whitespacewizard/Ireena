@@ -35,6 +35,10 @@
     .container { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
 
 
+    /* SINGLE-FILE INTERNAL PAGE SYSTEM */
+    .page-view { display: none; }
+    .page-view.active { display: block; }
+
     /* PASSWORD ACCESS SCREEN */
     .login-screen {
       position: fixed;
@@ -797,6 +801,10 @@
     }
 
 
+    /* SINGLE-FILE INTERNAL PAGE SYSTEM */
+    .page-view { display: none; }
+    .page-view.active { display: block; }
+
     /* PASSWORD ACCESS SCREEN */
     .login-screen {
       position: fixed;
@@ -1436,6 +1444,10 @@
 
     @media (max-width: 980px) {
   
+    /* SINGLE-FILE INTERNAL PAGE SYSTEM */
+    .page-view { display: none; }
+    .page-view.active { display: block; }
+
     /* PASSWORD ACCESS SCREEN */
     .login-screen {
       position: fixed;
@@ -1626,15 +1638,15 @@
 <nav>
     <a class="nav-logo" href="#top" data-view-target="proposal" data-scroll-target="top"><span>Proposal for Mr Pranav</span><small>by Ireena and Aman</small></a>
     <div class="nav-links">
-      <a href="#understanding">Understanding</a>
-      <a href="#scope">Scope</a>
+      <a href="#understanding" data-view-target="proposal" data-scroll-target="understanding">Understanding</a>
+      <a href="#scope" data-view-target="proposal" data-scroll-target="scope">Scope</a>
       <a href="#project-method" data-view-target="method">Our Process</a>
-      <a href="#maintenance">Maintenance</a>
-      <a href="#timeline">Timeline</a>
-      <a href="#terms">Terms</a>
+      <a href="#maintenance" data-view-target="proposal" data-scroll-target="maintenance">Maintenance</a>
+      <a href="#timeline" data-view-target="proposal" data-scroll-target="timeline">Timeline</a>
+      <a href="#terms" data-view-target="proposal" data-scroll-target="terms">Terms</a>
     </div>
     <div class="nav-actions">
-      <a class="nav-cta" href="#website-pricing">Review Pricing</a>
+      <a class="nav-cta" href="#website-pricing" data-view-target="proposal" data-scroll-target="website-pricing">Review Pricing</a>
     </div>
   </nav>
 
@@ -2110,7 +2122,7 @@
             Please review the website and social media pricing sections to choose the package that best matches the current requirement.
           </p>
           <div class="hero-actions" style="justify-content:flex-start; margin-top: 32px;">
-            <a class="btn" href="#website-pricing">Review Pricing</a>
+            <a class="btn" href="#website-pricing" data-view-target="proposal" data-scroll-target="website-pricing">Review Pricing</a>
           </div>
         </div>
       </div>
@@ -2338,86 +2350,79 @@
     <p>All information in this quotation is for project scoping and pricing purposes. Public-company communication, investor-related content, product visuals, and any forward-looking statements must be approved by the company before publishing.</p>
   </footer>
 
-  
+  <script>
+    (function () {
+      function activateView(viewName, scrollTarget, updateHash) {
+        const proposalView = document.getElementById("proposalView");
+        const methodView = document.getElementById("methodView");
 
-
-<script>
-openCart();
-        pulseCart();
-        showToast(type === "website" ? "Website plan added. Choose a social plan next." : "Social plan added. Ready to schedule meeting.");
-
-        if (type === "website") {
-          setTimeout(() => {
-            closeCart();
-            document.getElementById("social-pricing").scrollIntoView({ behavior: "smooth", block: "start" });
-          }, 1100);
-        }
-      });
-    });          if (cartPlanError) {
-            cartPlanError.textContent = "Please select one website plan and one social media plan.";
-            cartPlanError.classList.add("show");
-          }
-
-          showToast("Please select website and social plans first.");
+        if (!proposalView || !methodView) {
           return;
         }
 
-        if (bottomPlanError) bottomPlanError.classList.remove("show");
-        if (cartPlanError) cartPlanError.classList.remove("show");
-        showToast("Plans selected. Add meeting details and send email.");
-      });
-    }
+        if (viewName === "method") {
+          proposalView.classList.remove("active");
+          methodView.classList.add("active");
 
-    updateCart();
-  
-    function showView(viewName, scrollTarget) {
-      const proposalView = document.getElementById("proposalView");
-      const methodView = document.getElementById("methodView");
+          if (updateHash && window.location.hash !== "#project-method") {
+            history.pushState(null, "", "#project-method");
+          }
 
-      if (viewName === "method") {
-        proposalView.classList.remove("active");
-        methodView.classList.add("active");
-        history.pushState(null, "", "#project-method");
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
+          setTimeout(function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }, 30);
+
+          return;
+        }
+
         methodView.classList.remove("active");
         proposalView.classList.add("active");
-        const hash = scrollTarget ? "#" + scrollTarget : "#top";
-        history.pushState(null, "", hash);
-        setTimeout(() => {
-          const el = document.getElementById(scrollTarget || "top");
-          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-          else window.scrollTo({ top: 0, behavior: "smooth" });
-        }, 40);
-      }
-    }
 
-    document.querySelectorAll("[data-view-target]").forEach(link => {
-      link.addEventListener("click", (event) => {
+        const targetId = scrollTarget || "top";
+
+        if (updateHash && window.location.hash !== "#" + targetId) {
+          history.pushState(null, "", "#" + targetId);
+        }
+
+        setTimeout(function () {
+          const target = document.getElementById(targetId);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        }, 30);
+      }
+
+      document.addEventListener("click", function (event) {
+        const link = event.target.closest("a[data-view-target]");
+        if (!link) {
+          return;
+        }
+
         event.preventDefault();
-        showView(link.dataset.viewTarget, link.dataset.scrollTarget || null);
+        activateView(link.dataset.viewTarget, link.dataset.scrollTarget || null, true);
       });
-    });
 
-    function routeFromHash() {
-      if (window.location.hash === "#project-method") {
-        showView("method", null);
-      } else {
-        const id = window.location.hash ? window.location.hash.replace("#", "") : "top";
-        showView("proposal", id);
-      }
-    }
+      window.addEventListener("popstate", function () {
+        if (window.location.hash === "#project-method") {
+          activateView("method", null, false);
+        } else {
+          const id = window.location.hash ? window.location.hash.replace("#", "") : "top";
+          activateView("proposal", id, false);
+        }
+      });
 
-    window.addEventListener("popstate", routeFromHash);
-
-    if (window.location.hash === "#project-method") {
-      document.getElementById("proposalView").classList.remove("active");
-      document.getElementById("methodView").classList.add("active");
-      window.scrollTo(0, 0);
-    }
-
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.hash === "#project-method") {
+          activateView("method", null, false);
+        } else {
+          const id = window.location.hash ? window.location.hash.replace("#", "") : "top";
+          activateView("proposal", id, false);
+        }
+      });
+    })();
   </script>
-
 
 
   <script>
