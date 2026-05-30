@@ -1004,78 +1004,6 @@
       background: #fcfcfc;
     }
 
-    .select-plan-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(58,107,74,0.12);
-    }
-
-    .select-plan-btn.selected {
-      box-shadow: 0 12px 34px rgba(0,0,0,0.12);
-    }
-
-    .cart-sidebar {
-      border-radius: 24px 0 0 24px;
-    }
-
-    .cart-item, .meeting-box, .cart-total {
-      transition: all 0.25s var(--ease);
-    }
-
-    .cart-item:hover, .meeting-box:hover, .cart-total:hover {
-      border-color: rgba(58,107,74,0.28);
-      box-shadow: var(--shadow-card);
-    }
-
-    .cart-added-pulse {
-      animation: cartPulse 0.55s var(--ease);
-    }
-
-    @keyframes cartPulse {
-      0% { transform: scale(1); }
-      45% { transform: scale(1.025); box-shadow: 0 0 0 5px rgba(58,107,74,0.10); }
-      100% { transform: scale(1); }
-    }
-
-    .progress-wrap {
-      border: 1px solid var(--grey-border);
-      border-radius: 999px;
-      height: 8px;
-      background: var(--off-white);
-      overflow: hidden;
-      margin-top: 16px;
-    }
-
-    .progress-fill {
-      height: 100%;
-      width: 0%;
-      background: var(--accent);
-      border-radius: inherit;
-      transition: width 0.35s var(--ease);
-    }
-
-    .toast {
-      position: fixed;
-      left: 50%;
-      bottom: 26px;
-      transform: translate(-50%, 24px);
-      opacity: 0;
-      pointer-events: none;
-      z-index: 120;
-      background: var(--black);
-      color: var(--white);
-      border-radius: 999px;
-      padding: 12px 18px;
-      font-size: 13px;
-      font-weight: 700;
-      box-shadow: 0 18px 60px rgba(0,0,0,0.24);
-      transition: all 0.28s var(--ease);
-    }
-
-    .toast.show {
-      opacity: 1;
-      transform: translate(-50%, 0);
-    }
-
     @media (max-width: 900px) {
       .hero h1 span {
         white-space: normal;
@@ -1093,10 +1021,6 @@
 
       .hero h1 br {
         display: none;
-      }
-
-      .cart-sidebar {
-        border-radius: 0;
       }
     }
 
@@ -1444,252 +1368,6 @@
     }
 
 
-    /* INTERACTIVE PLAN SELECTION */
-    .select-plan-btn {
-      width: 100%;
-      border: 1px solid var(--accent);
-      background: var(--accent-faint);
-      color: var(--black);
-      border-radius: 12px;
-      padding: 13px 18px;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      cursor: pointer;
-      margin-top: 4px;
-    }
-
-    .select-plan-btn.selected {
-      background: var(--black);
-      border-color: var(--black);
-      color: var(--white);
-    }
-
-    .cart-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.22);
-      z-index: 80;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity .2s ease, visibility .2s ease;
-    }
-
-    .cart-overlay.open {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .cart-sidebar {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: min(440px, 100%);
-      height: 100vh;
-      background: var(--white);
-      z-index: 90;
-      border-left: 1px solid var(--grey-border);
-      transform: translateX(100%);
-      transition: transform .25s ease;
-      display: flex;
-      flex-direction: column;
-      box-shadow: -20px 0 60px rgba(0,0,0,0.12);
-    }
-
-    .cart-sidebar.open {
-      transform: translateX(0);
-    }
-
-    .cart-head {
-      min-height: 88px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 24px;
-      border-bottom: 1px solid var(--grey-border);
-    }
-
-    .cart-kicker,
-    .cart-item-label {
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    .cart-head h3 {
-      margin: 0;
-      font-size: 22px;
-    }
-
-    .cart-close {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      border: 1px solid var(--grey-border);
-      background: var(--off-white);
-      color: var(--black);
-      font-size: 24px;
-      line-height: 1;
-      cursor: pointer;
-    }
-
-    .cart-body {
-      overflow-y: auto;
-      padding: 24px;
-      display: grid;
-      gap: 16px;
-    }
-
-    .cart-item,
-    .meeting-box,
-    .cart-total {
-      border: 1px solid var(--grey-border);
-      background: var(--white);
-      border-radius: 18px;
-      padding: 18px;
-    }
-
-    .cart-item-title {
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 6px;
-    }
-
-    .cart-item-price,
-    .cart-total-note {
-      color: var(--grey-mid);
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .cart-field {
-      display: grid;
-      gap: 7px;
-      margin-top: 13px;
-    }
-
-    .cart-field label {
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--grey-light);
-    }
-
-    .cart-field input,
-    .cart-field textarea {
-      width: 100%;
-      border: 1px solid var(--grey-border);
-      background: var(--white);
-      border-radius: 12px;
-      padding: 12px 13px;
-      font: inherit;
-      outline: none;
-    }
-
-    .cart-field textarea {
-      min-height: 96px;
-      resize: vertical;
-    }
-
-    .cart-field input:focus,
-    .cart-field textarea:focus {
-      border-color: var(--accent);
-    }
-
-    .send-mail-btn {
-      border: 0;
-      background: var(--black);
-      color: var(--white);
-      border-radius: 12px;
-      padding: 15px 18px;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      cursor: pointer;
-    }
-
-    .send-mail-btn:disabled {
-      background: #cfcfcf;
-      cursor: not-allowed;
-    }
-
-    .cart-small-note {
-      font-size: 12px;
-      line-height: 1.65;
-      color: var(--grey-light);
-    }
-
-    @media (max-width: 900px) {
-      .hero h1 span {
-        white-space: normal;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .cart-sidebar {
-        width: 100%;
-      }
-    }
-
-
-
-
-    .proposal-by {
-      width: fit-content;
-      margin: -12px auto 24px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    .footer-logo span {
-      display: block;
-      margin-top: 8px;
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      color: rgba(255,255,255,0.62);
-    }
-
-    .inline-error {
-      display: none;
-      margin-top: 14px;
-      color: #B42318;
-      background: rgba(180,35,24,0.08);
-      border: 1px solid rgba(180,35,24,0.18);
-      border-radius: 12px;
-      padding: 10px 12px;
-      font-size: 13px;
-      font-weight: 700;
-      width: fit-content;
-    }
-
-    .inline-error.show {
-      display: block;
-    }
-
-    .cart-error {
-      display: none;
-      color: #B42318;
-      background: rgba(180,35,24,0.08);
-      border: 1px solid rgba(180,35,24,0.18);
-      border-radius: 12px;
-      padding: 10px 12px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .cart-error.show {
-      display: block;
-    }
-
     /* BASIC CLIENT-SIDE CONTENT PROTECTION / DETERRENTS */
     body.protected {
       -webkit-user-select: none;
@@ -1956,7 +1634,7 @@
       <a href="#terms">Terms</a>
     </div>
     <div class="nav-actions">
-      <button class="nav-cta" id="openCartBtn" type="button">Selection</button>
+      <a class="nav-cta" href="#next">Next Step</a>
     </div>
   </nav>
 
@@ -2150,9 +1828,6 @@
               <div class="meta-label">Free support</div>
               <div class="meta-copy">15 days free bug fixes after launch.</div>
             </div>
-            <button class="select-plan-btn" type="button" data-type="website" data-plan="Website Essential" data-price="INR 1,15,000">
-              Select Website Plan
-            </button>
           </article>
 
           <article class="package recommended">
@@ -2185,9 +1860,6 @@
               <div class="meta-label">Free support</div>
               <div class="meta-copy">30 days free support + bug fixes after launch.</div>
             </div>
-            <button class="select-plan-btn" type="button" data-type="website" data-plan="Website Recommended" data-price="INR 1,65,000">
-              Select Website Plan
-            </button>
           </article>
 
           <article class="package">
@@ -2221,9 +1893,6 @@
               <div class="meta-label">Free support</div>
               <div class="meta-copy">2 months dedicated support + bug fixes after launch.</div>
             </div>
-            <button class="select-plan-btn" type="button" data-type="website" data-plan="Website Corporate" data-price="INR 2,50,000">
-              Select Website Plan
-            </button>
           </article>
         </div>
 
@@ -2271,9 +1940,6 @@
                 <li>Basic monthly summary</li>
               </ul>
             </div>
-            <button class="select-plan-btn" type="button" data-type="social" data-plan="Social Essential" data-price="INR 30,000/month">
-              Select Social Plan
-            </button>
           </article>
 
           <article class="social-card recommended">
@@ -2301,9 +1967,6 @@
                 <li>Monthly performance report</li>
               </ul>
             </div>
-            <button class="select-plan-btn" type="button" data-type="social" data-plan="Social Recommended" data-price="INR 45,000/month">
-              Select Social Plan
-            </button>
           </article>
 
           <article class="social-card">
@@ -2331,9 +1994,6 @@
                 <li>Monthly performance report</li>
               </ul>
             </div>
-            <button class="select-plan-btn" type="button" data-type="social" data-plan="Social Corporate" data-price="INR 60,000/month">
-              Select Social Plan
-            </button>
           </article>
         </div>
 
@@ -2450,87 +2110,14 @@
             Once the preferred package is confirmed, we can begin with website structure, content checklist, approval workflow, and social media setup planning.
           </p>
           <div class="hero-actions" style="justify-content:flex-start; margin-top: 32px;">
-            <button class="btn dark" id="bottomConfirmBtn" type="button">Confirm & Begin</button>
+            <a class="btn dark" href="mailto:amanwalker9@gmail.com?subject=Zodiac%20Proposal%20Discussion&body=Hi%20Ireena%20%26%20Aman%2C%0A%0AI%20have%20reviewed%20the%20proposal.%20Please%20schedule%20a%20follow-up%20meeting%20to%20discuss%20the%20scope%20and%20next%20steps.%0A%0ARegards%2C%0APranav">Confirm & Begin</a>
             <a class="btn" href="#website-pricing">Review Pricing</a>
-            <div class="inline-error" id="bottomPlanError">Please select a plan first.</div>
           </div>
         </div>
       </div>
     </section>
   </main>
-
-
-  <div class="cart-overlay" id="cartOverlay"></div>
-  <aside class="cart-sidebar" id="cartSidebar" aria-label="Selected quotation plans">
-    <div class="cart-head">
-      <div>
-        <div class="cart-kicker">Selected Plans</div>
-        <h3>Review & schedule meeting</h3>
-      </div>
-      <button class="cart-close" id="closeCartBtn" type="button" aria-label="Close selection panel">×</button>
-    </div>
-
-    <div class="cart-body">
-      <div class="cart-item">
-        <div class="cart-item-label">Website Plan</div>
-        <div class="cart-item-title" id="selectedWebsiteName">Not selected yet</div>
-        <div class="cart-item-price" id="selectedWebsitePrice">Select any website package</div>
-      </div>
-
-      <div class="cart-item">
-        <div class="cart-item-label">Social Media Plan</div>
-        <div class="cart-item-title" id="selectedSocialName">Not selected yet</div>
-        <div class="cart-item-price" id="selectedSocialPrice">Select any social media package</div>
-      </div>
-
-      <div class="cart-total">
-        <div>
-          <div class="cart-item-label">Summary</div>
-          <div class="cart-total-note" id="cartSummary">Select one website plan and one social media plan.</div>
-          <div class="progress-wrap"><div class="progress-fill" id="progressFill"></div></div>
-        </div>
-      </div>
-
-      <div class="meeting-box">
-        <div class="cart-item-label">Schedule Next Meeting</div>
-        <div class="cart-field">
-          <label for="clientName">Name</label>
-          <input id="clientName" type="text" placeholder="Your name"/>
-        </div>
-        <div class="cart-field">
-          <label for="clientEmail">Email</label>
-          <input id="clientEmail" type="email" placeholder="Your email"/>
-        </div>
-        <div class="cart-field">
-          <label for="meetingDate">Preferred Date for Meeting</label>
-          <input id="meetingDate" type="date"/>
-        </div>
-        <div class="cart-field">
-          <label for="meetingTime">Preferred Time for Meeting</label>
-          <input id="meetingTime" type="time"/>
-        </div>
-        <div class="cart-field">
-          <label for="clientMessage">Message / Notes</label>
-          <textarea id="clientMessage" placeholder="Add any note before sending"></textarea>
-        </div>
-      </div>
-
-      <div class="cart-error" id="cartPlanError">Please select one website plan and one social media plan.</div>
-
-      <button class="send-mail-btn" id="sendMailBtn" type="button" disabled>
-        Send Selection by Email
-      </button>
-
-      <p class="cart-small-note">
-        This opens a pre-filled email draft to amanwalker9@gmail.com. To send emails automatically without opening the email app, this page needs a backend form service such as Formspree, EmailJS, or a custom server endpoint.
-      </p>
-    </div>
-  </aside>
-
-
-  <div class="toast" id="toast">Plan added to selection</div>
-
-  </div>
+</div>
 
   <div class="page-view" id="methodView">
 <section class="method-page-hero">
@@ -2756,117 +2343,7 @@
 
 
 <script>
-    const selection = {
-      website: null,
-      social: null
-    };
-
-    const cartSidebar = document.getElementById("cartSidebar");
-    const cartOverlay = document.getElementById("cartOverlay");
-    const openCartBtn = document.getElementById("openCartBtn");
-    const closeCartBtn = document.getElementById("closeCartBtn");
-    const sendMailBtn = document.getElementById("sendMailBtn");
-    const bottomConfirmBtn = document.getElementById("bottomConfirmBtn");
-    const bottomPlanError = document.getElementById("bottomPlanError");
-    const cartPlanError = document.getElementById("cartPlanError");
-
-    const selectedWebsiteName = document.getElementById("selectedWebsiteName");
-    const selectedWebsitePrice = document.getElementById("selectedWebsitePrice");
-    const selectedSocialName = document.getElementById("selectedSocialName");
-    const selectedSocialPrice = document.getElementById("selectedSocialPrice");
-    const cartSummary = document.getElementById("cartSummary");
-    const progressFill = document.getElementById("progressFill");
-    const toast = document.getElementById("toast");
-
-    function updateNavShadow() {
-      document.querySelector("nav").classList.toggle("scrolled", window.scrollY > 10);
-    }
-    window.addEventListener("scroll", updateNavShadow);
-    updateNavShadow();
-
-    function showToast(message) {
-      toast.textContent = message;
-      toast.classList.add("show");
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(() => toast.classList.remove("show"), 1700);
-    }
-
-    function pulseCart() {
-      cartSidebar.classList.remove("cart-added-pulse");
-      void cartSidebar.offsetWidth;
-      cartSidebar.classList.add("cart-added-pulse");
-    }
-
-    function openCart() {
-      cartSidebar.classList.add("open");
-      cartOverlay.classList.add("open");
-    }
-
-    function closeCart() {
-      cartSidebar.classList.remove("open");
-      cartOverlay.classList.remove("open");
-    }
-
-    function updateCart() {
-      if (selection.website) {
-        selectedWebsiteName.textContent = selection.website.plan;
-        selectedWebsitePrice.textContent = selection.website.price + " one-time";
-      } else {
-        selectedWebsiteName.textContent = "Not selected yet";
-        selectedWebsitePrice.textContent = "Select any website package";
-      }
-
-      if (selection.social) {
-        selectedSocialName.textContent = selection.social.plan;
-        selectedSocialPrice.textContent = selection.social.price;
-      } else {
-        selectedSocialName.textContent = "Not selected yet";
-        selectedSocialPrice.textContent = "Select any social media package";
-      }
-
-      const selectedCount = (selection.website ? 1 : 0) + (selection.social ? 1 : 0);
-      progressFill.style.width = selectedCount === 0 ? "0%" : selectedCount === 1 ? "50%" : "100%";
-
-      if (selection.website && selection.social) {
-        cartSummary.textContent = selection.website.price + " one-time website build + " + selection.social.price + " social media management.";
-        sendMailBtn.disabled = false;
-        if (bottomPlanError) bottomPlanError.classList.remove("show");
-        if (cartPlanError) cartPlanError.classList.remove("show");
-      } else if (selection.website) {
-        cartSummary.textContent = "Website plan selected. Now select one social media plan.";
-        sendMailBtn.disabled = true;
-      } else if (selection.social) {
-        cartSummary.textContent = "Social media plan selected. Now select one website plan.";
-        sendMailBtn.disabled = true;
-      } else {
-        cartSummary.textContent = "Select one website plan and one social media plan.";
-        sendMailBtn.disabled = true;
-      }
-    }
-
-    function clearSelectedButtons(type) {
-      document.querySelectorAll('.select-plan-btn[data-type="' + type + '"]').forEach(button => {
-        button.classList.remove("selected");
-        button.textContent = type === "website" ? "Select Website Plan" : "Select Social Plan";
-      });
-    }
-
-    document.querySelectorAll(".select-plan-btn").forEach(button => {
-      button.addEventListener("click", () => {
-        const type = button.dataset.type;
-        const plan = button.dataset.plan;
-        const price = button.dataset.price;
-
-        selection[type] = { plan, price };
-        if (bottomPlanError) bottomPlanError.classList.remove("show");
-        if (cartPlanError) cartPlanError.classList.remove("show");
-
-        clearSelectedButtons(type);
-        button.classList.add("selected");
-        button.textContent = "Selected";
-
-        updateCart();
-        openCart();
+openCart();
         pulseCart();
         showToast(type === "website" ? "Website plan added. Choose a social plan next." : "Social plan added. Ready to schedule meeting.");
 
@@ -2877,24 +2354,7 @@
           }, 1100);
         }
       });
-    });
-
-    openCartBtn.addEventListener("click", openCart);
-    closeCartBtn.addEventListener("click", closeCart);
-    cartOverlay.addEventListener("click", closeCart);
-
-    
-    if (bottomConfirmBtn) {
-      bottomConfirmBtn.addEventListener("click", () => {
-        openCart();
-
-        if (!selection.website || !selection.social) {
-          if (bottomPlanError) {
-            bottomPlanError.textContent = "Please select a plan first.";
-            bottomPlanError.classList.add("show");
-          }
-
-          if (cartPlanError) {
+    });          if (cartPlanError) {
             cartPlanError.textContent = "Please select one website plan and one social media plan.";
             cartPlanError.classList.add("show");
           }
@@ -2908,48 +2368,6 @@
         showToast("Plans selected. Add meeting details and send email.");
       });
     }
-
-
-    sendMailBtn.addEventListener("click", () => {
-      if (!selection.website || !selection.social) {
-        if (cartPlanError) cartPlanError.classList.add("show");
-        showToast("Please select website and social plans first.");
-        return;
-      }
-
-      const clientName = document.getElementById("clientName").value.trim();
-      const clientEmail = document.getElementById("clientEmail").value.trim();
-      const meetingDate = document.getElementById("meetingDate").value;
-      const meetingTime = document.getElementById("meetingTime").value;
-      const clientMessage = document.getElementById("clientMessage").value.trim();
-
-      const subject = "Zodiac Proposal Selection - " + selection.website.plan + " + " + selection.social.plan;
-
-      const body = [
-        "Selected Website Plan: " + selection.website.plan,
-        "Website Price: " + selection.website.price + " one-time",
-        "",
-        "Selected Social Media Plan: " + selection.social.plan,
-        "Social Media Price: " + selection.social.price,
-        "",
-        "Preferred Meeting Date: " + (meetingDate || "Not provided"),
-        "Preferred Meeting Time: " + (meetingTime || "Not provided"),
-        "",
-        "Client Name: " + (clientName || "Not provided"),
-        "Client Email: " + (clientEmail || "Not provided"),
-        "",
-        "Message / Notes:",
-        clientMessage || "No message added.",
-        "",
-        "Note: Domain, hosting, paid ads, photoshoot, videoshoot, premium tools, GST and third-party costs are separate unless specifically included."
-      ].join("\\n");
-
-      const mailto = "mailto:amanwalker9@gmail.com"
-        + "?subject=" + encodeURIComponent(subject)
-        + "&body=" + encodeURIComponent(body);
-
-      window.location.href = mailto;
-    });
 
     updateCart();
   
