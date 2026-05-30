@@ -1,0 +1,2792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zodiac JRD MKJ Ltd. — Website & Social Media Quotation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --black: #000000;
+      --white: #FFFFFF;
+      --off-white: #F7F7F7;
+      --accent: #3A6B4A;
+      --accent-faint: rgba(58,107,74,0.10);
+      --grey-mid: #333333;
+      --grey-light: #777777;
+      --grey-border: #E0E0E0;
+      --font: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--white);
+      color: var(--black);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: 64px;
+      background: var(--white);
+      border-bottom: 1px solid var(--grey-border);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 48px;
+    }
+
+    .nav-logo {
+      justify-self: start;
+      display: grid;
+      gap: 3px;
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+
+    .nav-logo span {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-logo small {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: var(--grey-light);
+    }
+
+    .nav-links {
+      justify-self: center;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      color: #555;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-actions { justify-self: end; }
+
+    .nav-cta {
+      background: var(--black);
+      color: var(--white);
+      padding: 9px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 96px 0;
+      border-bottom: 1px solid var(--grey-border);
+    }
+
+    .section.alt { background: var(--off-white); }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--grey-mid);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .eyebrow.center { justify-content: center; }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(38px, 5.4vw, 74px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    h2 {
+      font-size: clamp(25px, 3.6vw, 45px);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+      margin-bottom: 26px;
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+      margin-bottom: 11px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--grey-mid);
+    }
+
+    .lead {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--grey-mid);
+      max-width: 720px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 24px;
+      border-radius: 12px;
+      border: 1px solid var(--accent);
+      background: var(--accent-faint);
+      color: var(--black);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .btn.dark {
+      background: var(--black);
+      border-color: var(--black);
+      color: var(--white);
+    }
+
+    .hero {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 48px 76px;
+      border-bottom: 1px solid var(--grey-border);
+      background: var(--white);
+    }
+
+    .hero-inner {
+      max-width: 940px;
+      margin: 0 auto;
+    }
+
+    .doc-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      width: fit-content;
+      margin: 0 auto 22px;
+      padding: 7px 14px;
+      background: var(--accent-faint);
+      border: 1px solid rgba(58,107,74,0.22);
+      border-radius: 30px;
+      color: var(--grey-mid);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .doc-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .hero h1 { margin-bottom: 28px; }
+
+    .hero-sub {
+      max-width: 760px;
+      margin: 0 auto 38px;
+      color: var(--grey-mid);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stats-section {
+      background: var(--off-white);
+      border-bottom: 1px solid var(--grey-border);
+      padding: 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-left: 1px solid var(--grey-border);
+      border-right: 1px solid var(--grey-border);
+    }
+
+    .stat {
+      padding: 34px 30px;
+      border-right: 1px solid var(--grey-border);
+      background: var(--off-white);
+    }
+
+    .stat:last-child { border-right: 0; }
+
+    .stat-num {
+      font-size: 38px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin-bottom: 8px;
+    }
+
+    .stat-num span { color: var(--accent); }
+
+    .stat-desc {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--grey-mid);
+      line-height: 1.5;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 92px;
+      align-items: start;
+    }
+
+    .weight-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .weight-card {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 18px;
+      align-items: start;
+      background: var(--white);
+      border: 1px solid var(--grey-border);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .weight {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .weight-title {
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .weight-copy {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--grey-mid);
+    }
+
+    .scope-system {
+      border: 1px solid var(--grey-border);
+      border-radius: 24px;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .scope-row {
+      display: grid;
+      grid-template-columns: 92px 1fr 1.55fr;
+      min-height: 112px;
+      border-bottom: 1px solid var(--grey-border);
+    }
+
+    .scope-row:last-child { border-bottom: 0; }
+
+    .scope-step {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid var(--grey-border);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .scope-name {
+      display: flex;
+      align-items: center;
+      padding: 24px 28px;
+      border-right: 1px solid var(--grey-border);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .scope-copy {
+      display: flex;
+      align-items: center;
+      padding: 24px 30px;
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--grey-mid);
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .package {
+      background: var(--white);
+      border: 1px solid var(--grey-border);
+      border-radius: 24px;
+      padding: 30px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .package.recommended {
+      border-color: var(--accent);
+      box-shadow: inset 0 0 0 1px var(--accent);
+      background: linear-gradient(180deg, var(--accent-faint), var(--white) 22%);
+    }
+
+    .package-top {
+      border-bottom: 1px solid var(--grey-border);
+      padding-bottom: 22px;
+    }
+
+    .package-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .best-for {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: var(--off-white);
+      color: var(--grey-mid);
+      font-size: 13px;
+      line-height: 1.6;
+      margin-top: 16px;
+    }
+
+    .price-stack {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .price-item {
+      border: 1px solid var(--grey-border);
+      border-radius: 14px;
+      padding: 14px;
+      background: var(--white);
+    }
+
+    .price-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      margin-bottom: 6px;
+    }
+
+    .price {
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .price small {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0;
+      color: var(--grey-light);
+    }
+
+    .included-title {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      margin-bottom: 14px;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .feature-list li {
+      list-style: none;
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--grey-mid);
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent-faint);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .support-row {
+      border-top: 1px solid var(--grey-border);
+      padding-top: 18px;
+      margin-top: auto;
+    }
+
+    .meta-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      margin-bottom: 8px;
+    }
+
+    .meta-copy {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--grey-mid);
+    }
+
+    .note-box {
+      margin-top: 32px;
+      border: 1px solid rgba(58,107,74,0.22);
+      background: var(--accent-faint);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .social-card {
+      background: var(--white);
+      border: 1px solid var(--grey-border);
+      border-radius: 24px;
+      padding: 30px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .social-card.recommended {
+      border-color: var(--accent);
+      box-shadow: inset 0 0 0 1px var(--accent);
+      background: linear-gradient(180deg, var(--accent-faint), var(--white) 22%);
+    }
+
+    .split-note {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .split-note-card {
+      border: 1px solid var(--grey-border);
+      border-radius: 18px;
+      background: var(--white);
+      padding: 22px;
+    }
+
+    .split-note-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--black);
+    }
+
+    .maintenance-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .maintenance-card {
+      background: var(--white);
+      border: 1px solid var(--grey-border);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .maintenance-card h3 {
+      margin-bottom: 18px;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      border: 1px solid var(--grey-border);
+      border-radius: 24px;
+      overflow: hidden;
+      background: var(--white);
+      margin-top: 36px;
+    }
+
+    .timeline-row {
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      border-right: 1px solid var(--grey-border);
+      min-height: 270px;
+      position: relative;
+      background: var(--white);
+    }
+
+    .timeline-row:last-child { border-right: 0; }
+    .timeline-row::before,
+    .timeline-row::after {
+      display: none;
+    }
+
+    .timeline-period,
+    .timeline-title,
+    .timeline-output {
+      padding: 24px 24px;
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--grey-mid);
+    }
+
+    .timeline-period {
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding-bottom: 18px;
+    }
+
+    .timeline-title {
+      font-weight: 800;
+      color: var(--black);
+      border-top: 1px solid var(--grey-border);
+      padding-bottom: 8px;
+      background: #fbfbfb;
+    }
+
+    .timeline-output {
+      padding-top: 0;
+    }
+
+    .terms-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 42px;
+    }
+
+    .term-card {
+      border: 1px solid var(--grey-border);
+      border-radius: 20px;
+      background: var(--white);
+      padding: 26px;
+    }
+
+    .term-card .kicker {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+
+
+    footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 34px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+      color: var(--white);
+      font-size: 12px;
+      line-height: 1.6;
+      max-width: 760px;
+    }
+
+    .footer-logo {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+
+
+    /* SMOOTHER UI ENHANCEMENTS */
+    :root {
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --shadow-soft: 0 18px 60px rgba(0,0,0,0.08);
+      --shadow-card: 0 12px 36px rgba(0,0,0,0.06);
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 12% 8%, rgba(58,107,74,0.06), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #ffffff 45%, #fafafa 100%);
+    }
+
+    a, button, .package, .social-card, .maintenance-card, .term-card, .weight-card,
+    .scope-row, .stat, .price-item, .split-note-card, .select-plan-btn {
+      transition: all 0.28s var(--ease);
+    }
+
+    nav {
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+      backdrop-filter: blur(14px);
+    }
+
+    nav.scrolled {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+      background: rgba(255,255,255,0.92);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(58,107,74,0.08), transparent 26%),
+        radial-gradient(circle at 84% 66%, rgba(58,107,74,0.06), transparent 28%),
+        var(--white);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 74px 74px;
+      mask-image: radial-gradient(circle at 50% 42%, black, transparent 72%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: clamp(38px, 4.4vw, 63px);
+    }
+
+    .hero h1 span {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .doc-label {
+      box-shadow: 0 8px 28px rgba(58,107,74,0.08);
+    }
+
+    .btn, .nav-cta, .send-mail-btn {
+      transition: transform 0.24s var(--ease), background 0.24s var(--ease), border-color 0.24s var(--ease), box-shadow 0.24s var(--ease);
+    }
+
+    .btn:hover, .nav-cta:hover, .send-mail-btn:not(:disabled):hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 34px rgba(0,0,0,0.12);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 22px 0;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 16px;
+      height: 1.5px;
+      background: var(--black);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.25s var(--ease);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .stat:hover {
+      background: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .weight-card:hover, .term-card:hover, .maintenance-card:hover, .split-note-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+      border-color: rgba(58,107,74,0.24);
+    }
+
+    .scope-row:hover {
+      background: #fbfbfb;
+    }
+
+    .package:hover, .social-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow-soft);
+      border-color: rgba(58,107,74,0.28);
+    }
+
+    .package.recommended:hover, .social-card.recommended:hover {
+      box-shadow: 0 20px 70px rgba(58,107,74,0.14);
+    }
+
+    .price-item:hover {
+      border-color: rgba(58,107,74,0.28);
+      background: #fcfcfc;
+    }
+
+    .select-plan-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(58,107,74,0.12);
+    }
+
+    .select-plan-btn.selected {
+      box-shadow: 0 12px 34px rgba(0,0,0,0.12);
+    }
+
+    .cart-sidebar {
+      border-radius: 24px 0 0 24px;
+    }
+
+    .cart-item, .meeting-box, .cart-total {
+      transition: all 0.25s var(--ease);
+    }
+
+    .cart-item:hover, .meeting-box:hover, .cart-total:hover {
+      border-color: rgba(58,107,74,0.28);
+      box-shadow: var(--shadow-card);
+    }
+
+    .cart-added-pulse {
+      animation: cartPulse 0.55s var(--ease);
+    }
+
+    @keyframes cartPulse {
+      0% { transform: scale(1); }
+      45% { transform: scale(1.025); box-shadow: 0 0 0 5px rgba(58,107,74,0.10); }
+      100% { transform: scale(1); }
+    }
+
+    .progress-wrap {
+      border: 1px solid var(--grey-border);
+      border-radius: 999px;
+      height: 8px;
+      background: var(--off-white);
+      overflow: hidden;
+      margin-top: 16px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent);
+      border-radius: inherit;
+      transition: width 0.35s var(--ease);
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 26px;
+      transform: translate(-50%, 24px);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 120;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.24);
+      transition: all 0.28s var(--ease);
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    @media (max-width: 900px) {
+      .hero h1 span {
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero h1 span {
+        white-space: normal;
+      }
+
+      .hero h1 br {
+        display: none;
+      }
+
+      .cart-sidebar {
+        border-radius: 0;
+      }
+    }
+
+
+
+    /* IMPROVED PROJECT UNDERSTANDING SECTION */
+    .understanding-section {
+      background:
+        radial-gradient(circle at 12% 20%, rgba(58,107,74,0.055), transparent 28%),
+        var(--off-white);
+    }
+
+    .understanding-panel {
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .understanding-copy-card {
+      border: 1px solid var(--grey-border);
+      border-radius: 28px;
+      background: var(--white);
+      padding: 38px;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.045);
+      position: sticky;
+      top: 96px;
+    }
+
+    .understanding-copy-card h2 {
+      margin-bottom: 22px;
+    }
+
+    .understanding-copy-card .mini-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .understanding-copy-card .mini-list span {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--grey-mid);
+    }
+
+    .understanding-copy-card .mini-list span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex: 0 0 auto;
+      margin-top: 8px;
+    }
+
+    .weight-grid.improved {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 0;
+    }
+
+    .weight-card.improved {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      min-height: 220px;
+      padding: 26px;
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 12px 42px rgba(0,0,0,0.04);
+    }
+
+    .weight-card.improved::after {
+      content: "";
+      position: absolute;
+      right: -44px;
+      top: -44px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--accent-faint);
+      pointer-events: none;
+    }
+
+    .weight-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .weight.improved {
+      font-size: 34px;
+    }
+
+    .weight-tag {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      margin-top: 8px;
+    }
+
+    .weight-title.improved {
+      font-size: 17px;
+      line-height: 1.25;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .weight-copy.improved {
+      font-size: 13.5px;
+      line-height: 1.72;
+      position: relative;
+      z-index: 1;
+    }
+
+    .progress-line {
+      height: 8px;
+      background: var(--off-white);
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid var(--grey-border);
+      position: relative;
+      z-index: 1;
+      margin-top: auto;
+    }
+
+    .progress-line span {
+      display: block;
+      height: 100%;
+      background: var(--accent);
+      border-radius: inherit;
+    }
+
+    @media (max-width: 980px) {
+      .understanding-panel,
+      .weight-grid.improved {
+        grid-template-columns: 1fr;
+      }
+
+      .understanding-copy-card {
+        position: static;
+      }
+    }
+
+    /* PROJECT METHOD / VALUE EXPLANATION */
+    .floating-process-link {
+      position: fixed;
+      right: 22px;
+      bottom: 24px;
+      z-index: 70;
+      background: var(--black);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 18px 54px rgba(0,0,0,0.18);
+      transition: transform 0.24s var(--ease), box-shadow 0.24s var(--ease), background 0.24s var(--ease);
+    }
+
+    .floating-process-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.24);
+      background: var(--accent);
+    }
+
+    .process-hero-panel {
+      border: 1px solid var(--grey-border);
+      border-radius: 28px;
+      background: var(--white);
+      padding: 38px;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 54px;
+      align-items: start;
+      margin-top: 42px;
+    }
+
+    .process-summary {
+      display: grid;
+      gap: 14px;
+    }
+
+    .summary-pill {
+      border: 1px solid var(--grey-border);
+      border-radius: 16px;
+      padding: 18px;
+      background: var(--off-white);
+    }
+
+    .summary-pill strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: var(--black);
+    }
+
+    .summary-pill span {
+      display: block;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--grey-mid);
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 38px;
+    }
+
+    .method-card {
+      border: 1px solid var(--grey-border);
+      border-radius: 24px;
+      background: var(--white);
+      padding: 28px;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease), border-color 0.28s var(--ease);
+    }
+
+    .method-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-card);
+      border-color: rgba(58,107,74,0.28);
+    }
+
+    .method-step {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 34px;
+    }
+
+    .method-card h3 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .method-card p {
+      font-size: 13.5px;
+      line-height: 1.7;
+    }
+
+    .deliverable-table {
+      margin-top: 42px;
+      border: 1px solid var(--grey-border);
+      border-radius: 24px;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .deliverable-row {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      border-bottom: 1px solid var(--grey-border);
+    }
+
+    .deliverable-row:last-child {
+      border-bottom: 0;
+    }
+
+    .deliverable-name {
+      padding: 22px 26px;
+      font-size: 15px;
+      font-weight: 800;
+      border-right: 1px solid var(--grey-border);
+      background: var(--off-white);
+    }
+
+    .deliverable-copy {
+      padding: 22px 26px;
+      color: var(--grey-mid);
+      font-size: 13.5px;
+      line-height: 1.7;
+    }
+
+    .pricing-logic-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .pricing-logic-card {
+      border: 1px solid var(--grey-border);
+      border-radius: 22px;
+      background: var(--white);
+      padding: 26px;
+    }
+
+    .pricing-logic-card .kicker {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .pricing-logic-card h3 {
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 980px) {
+      .process-hero-panel,
+      .method-grid,
+      .pricing-logic-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .floating-process-link {
+        right: 16px;
+        bottom: 16px;
+        font-size: 11px;
+        padding: 10px 14px;
+      }
+
+      .deliverable-row {
+        grid-template-columns: 1fr;
+      }
+
+      .deliverable-name {
+        border-right: 0;
+        border-bottom: 1px solid var(--grey-border);
+      }
+    }
+
+
+    /* INTERACTIVE PLAN SELECTION */
+    .select-plan-btn {
+      width: 100%;
+      border: 1px solid var(--accent);
+      background: var(--accent-faint);
+      color: var(--black);
+      border-radius: 12px;
+      padding: 13px 18px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      margin-top: 4px;
+    }
+
+    .select-plan-btn.selected {
+      background: var(--black);
+      border-color: var(--black);
+      color: var(--white);
+    }
+
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.22);
+      z-index: 80;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .2s ease, visibility .2s ease;
+    }
+
+    .cart-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .cart-sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: min(440px, 100%);
+      height: 100vh;
+      background: var(--white);
+      z-index: 90;
+      border-left: 1px solid var(--grey-border);
+      transform: translateX(100%);
+      transition: transform .25s ease;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -20px 0 60px rgba(0,0,0,0.12);
+    }
+
+    .cart-sidebar.open {
+      transform: translateX(0);
+    }
+
+    .cart-head {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 24px;
+      border-bottom: 1px solid var(--grey-border);
+    }
+
+    .cart-kicker,
+    .cart-item-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .cart-head h3 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .cart-close {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--grey-border);
+      background: var(--off-white);
+      color: var(--black);
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .cart-body {
+      overflow-y: auto;
+      padding: 24px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .cart-item,
+    .meeting-box,
+    .cart-total {
+      border: 1px solid var(--grey-border);
+      background: var(--white);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .cart-item-title {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .cart-item-price,
+    .cart-total-note {
+      color: var(--grey-mid);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .cart-field {
+      display: grid;
+      gap: 7px;
+      margin-top: 13px;
+    }
+
+    .cart-field label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+    }
+
+    .cart-field input,
+    .cart-field textarea {
+      width: 100%;
+      border: 1px solid var(--grey-border);
+      background: var(--white);
+      border-radius: 12px;
+      padding: 12px 13px;
+      font: inherit;
+      outline: none;
+    }
+
+    .cart-field textarea {
+      min-height: 96px;
+      resize: vertical;
+    }
+
+    .cart-field input:focus,
+    .cart-field textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .send-mail-btn {
+      border: 0;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 15px 18px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+    }
+
+    .send-mail-btn:disabled {
+      background: #cfcfcf;
+      cursor: not-allowed;
+    }
+
+    .cart-small-note {
+      font-size: 12px;
+      line-height: 1.65;
+      color: var(--grey-light);
+    }
+
+    @media (max-width: 900px) {
+      .hero h1 span {
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .cart-sidebar {
+        width: 100%;
+      }
+    }
+
+
+
+
+    .proposal-by {
+      width: fit-content;
+      margin: -12px auto 24px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .footer-logo span {
+      display: block;
+      margin-top: 8px;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.62);
+    }
+
+    .inline-error {
+      display: none;
+      margin-top: 14px;
+      color: #B42318;
+      background: rgba(180,35,24,0.08);
+      border: 1px solid rgba(180,35,24,0.18);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      width: fit-content;
+    }
+
+    .inline-error.show {
+      display: block;
+    }
+
+    .cart-error {
+      display: none;
+      color: #B42318;
+      background: rgba(180,35,24,0.08);
+      border: 1px solid rgba(180,35,24,0.18);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .cart-error.show {
+      display: block;
+    }
+
+    /* BASIC CLIENT-SIDE CONTENT PROTECTION / DETERRENTS */
+    body.protected {
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+
+    .security-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.92);
+      color: #fff;
+      text-align: center;
+      padding: 28px;
+    }
+
+    .security-overlay.show {
+      display: flex;
+    }
+
+    .security-overlay-box {
+      max-width: 560px;
+      border: 1px solid rgba(255,255,255,0.20);
+      border-radius: 22px;
+      padding: 30px;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .security-overlay-box h2 {
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .security-overlay-box p {
+      color: rgba(255,255,255,0.75);
+      margin: 0;
+    }
+
+    @media print {
+      body * {
+        visibility: hidden !important;
+      }
+
+      body::before {
+        content: "Printing is disabled for this confidential proposal.";
+        visibility: visible !important;
+        display: block;
+        padding: 40px;
+        font-size: 24px;
+        font-weight: 800;
+        color: #000;
+      }
+    }
+
+    @media print {
+      nav, .btn { display: none !important; }
+      .hero { min-height: auto; }
+      .section, .hero { padding-top: 48px; padding-bottom: 48px; }
+      .package, .maintenance-card { break-inside: avoid; }
+      body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+
+    @media (max-width: 980px) {
+      nav { padding: 0 24px; grid-template-columns: 1fr auto; }
+      .nav-links { display: none; }
+      .nav-actions { justify-self: end; }
+      .container { padding: 0 24px; }
+      .hero { padding: 88px 24px 56px; }
+      .two-col, .packages, .social-grid, .terms-grid, .maintenance-grid, .split-note { grid-template-columns: 1fr; gap: 36px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(2) { border-right: 0; }
+      .scope-row { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: 1fr; }
+      .timeline-row { grid-template-columns: 1fr; min-height: auto; border-right: 0; border-bottom: 1px solid var(--grey-border); }
+      .scope-step, .scope-name { border-right: 0; border-bottom: 1px solid var(--grey-border); justify-content: flex-start; }
+      .timeline-period, .timeline-title { border-right: 0; border-bottom: 0; justify-content: flex-start; }
+      .scope-step { padding: 18px 24px; }
+      .timeline-row::before, .timeline-row::after { display: none; }
+      .timeline-row:last-child { border-bottom: 0; }
+
+
+
+    footer { padding: 28px 24px; }
+    }
+
+    @media (max-width: 900px) {
+      .hero h1 span {
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .stat { border-right: 0; border-bottom: 1px solid var(--grey-border); }
+      .stat:last-child { border-bottom: 0; }
+      .weight-card { grid-template-columns: 1fr; }
+      h1 { font-size: 38px; }
+    }
+  
+    /* SINGLE-FILE PAGE VIEW SYSTEM */
+    .page-view {
+      display: none;
+    }
+
+    .page-view.active {
+      display: block;
+    }
+
+    .floating-process-link {
+      display: none !important;
+    }
+
+    .method-page-hero {
+      padding: 116px 0 74px;
+      background: var(--white);
+      border-bottom: 1px solid var(--grey-border);
+      text-align: center;
+    }
+
+    .method-page-hero h1 {
+      max-width: 980px;
+      margin: 0 auto 24px;
+      font-size: clamp(38px, 5.2vw, 68px);
+    }
+
+    .method-page-hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .back-strip {
+      padding: 24px 0;
+      background: var(--off-white);
+      border-bottom: 1px solid var(--grey-border);
+    }
+
+    .back-strip .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+</style>
+</head>
+<body class="protected">
+<div class="security-overlay" id="securityOverlay">
+    <div class="security-overlay-box">
+      <h2>Confidential Proposal</h2>
+      <p>Viewing, copying, saving, printing, or inspecting this proposal is restricted.</p>
+    </div>
+  </div>
+
+
+<nav>
+    <a class="nav-logo" href="#top" data-view-target="proposal" data-scroll-target="top"><span>Proposal for Mr Pranav</span><small>by Ireena and Aman</small></a>
+    <div class="nav-links">
+      <a href="#understanding">Understanding</a>
+      <a href="#scope">Scope</a>
+      <a href="#project-method" data-view-target="method">Our Process</a>
+      <a href="#maintenance">Maintenance</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#terms">Terms</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-cta" id="openCartBtn" type="button">Selection</button>
+    </div>
+  </nav>
+
+  
+
+  <div class="page-view active" id="proposalView">
+<main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="doc-label"><span class="doc-dot"></span> Website + Social Media Quotation</div>
+        <h1><span>Automotive-first website</span><br><span>redesign and social media launch.</span></h1>
+        <p class="hero-sub">
+          A clean corporate proposal for repositioning the website from a diamond-led presence to an automotive-first digital presence, while retaining the diamond business as a secondary legacy vertical.
+        </p>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="stat-num">30</div>
+            <div class="stat-desc">Days target website delivery</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">2</div>
+            <div class="stat-desc">Channels: LinkedIn + Instagram</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">70<span>%</span></div>
+            <div class="stat-desc">Automotive-first content weightage</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">50<span>/</span>50</div>
+            <div class="stat-desc">Payment structure</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt understanding-section" id="understanding">
+      <div class="container understanding-panel">
+        <div class="understanding-copy-card">
+          <div class="eyebrow">Project Understanding</div>
+          <h2>The website should now reflect the company’s next phase.</h2>
+          <p>
+            The current requirement is not only a visual refresh. The website needs to communicate automotive components, tooling, injection moulded parts, Investor Relations updates, and clear business inquiry pathways. SEO is included as technical hygiene, but the primary need is credibility, compliance-safe structure, stakeholder clarity, and updated corporate positioning.
+          </p>
+
+          <div class="mini-list">
+            <span>Automotive should become the main communication priority.</span>
+            <span>Diamond business should remain visible as a secondary legacy vertical.</span>
+            <span>Investor and public-facing information should be structured clearly.</span>
+            <span>Product/factory details should be used only after internal approval.</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="lead">Suggested content and positioning weightage for the redesigned digital presence:</p>
+
+          <div class="weight-grid improved">
+            <div class="weight-card improved">
+              <div class="weight-top">
+                <div>
+                  <div class="weight improved">70%</div>
+                  <div class="weight-tag">Primary focus</div>
+                </div>
+              </div>
+              <div>
+                <div class="weight-title improved">Automotive Components Focus</div>
+                <div class="weight-copy improved">Primary focus on tooling, injection moulded plastic parts, Pune factory capability, manufacturing process, product categories, and B2B credibility.</div>
+              </div>
+              <div class="progress-line"><span style="width:70%"></span></div>
+            </div>
+
+            <div class="weight-card improved">
+              <div class="weight-top">
+                <div>
+                  <div class="weight improved">15%</div>
+                  <div class="weight-tag">Public company</div>
+                </div>
+              </div>
+              <div>
+                <div class="weight-title improved">Investor Relations & Shareholder Communication</div>
+                <div class="weight-copy improved">Clear IR structure, disclosure sections, document upload flow, company updates, and accurate public/shareholder-facing information.</div>
+              </div>
+              <div class="progress-line"><span style="width:15%"></span></div>
+            </div>
+
+            <div class="weight-card improved">
+              <div class="weight-top">
+                <div>
+                  <div class="weight improved">10%</div>
+                  <div class="weight-tag">Legacy layer</div>
+                </div>
+              </div>
+              <div>
+                <div class="weight-title improved">Diamond Legacy</div>
+                <div class="weight-copy improved">Diamond business to stay as a secondary legacy/background vertical, not the primary communication focus of the redesigned website.</div>
+              </div>
+              <div class="progress-line"><span style="width:10%"></span></div>
+            </div>
+
+            <div class="weight-card improved">
+              <div class="weight-top">
+                <div>
+                  <div class="weight improved">5%</div>
+                  <div class="weight-tag">Support layer</div>
+                </div>
+              </div>
+              <div>
+                <div class="weight-title improved">Corporate Trust & Support</div>
+                <div class="weight-copy improved">Helpdesk, contact, vendor/partner inquiry, business inquiry, approval-safe information, and stakeholder routing.</div>
+              </div>
+              <div class="progress-line"><span style="width:5%"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section" id="scope">
+      <div class="container">
+        <div class="eyebrow">Recommended Scope</div>
+        <h2>Website and social media scope designed for a listed company.</h2>
+
+        <div class="scope-system">
+          <div class="scope-row">
+            <div class="scope-step">01</div>
+            <div class="scope-name">Corporate Website Structure</div>
+            <div class="scope-copy">Automotive-first sitemap, stakeholder-focused navigation, diamond legacy positioning, and Investor Relations architecture.</div>
+          </div>
+          <div class="scope-row">
+            <div class="scope-step">02</div>
+            <div class="scope-name">Responsive Website Design</div>
+            <div class="scope-copy">Clean corporate UI, responsive desktop/tablet/mobile layouts, clear hierarchy, professional sections, and device-friendly page structure.</div>
+          </div>
+          <div class="scope-row">
+            <div class="scope-step">03</div>
+            <div class="scope-name">Investor & Compliance Structure</div>
+            <div class="scope-copy">Investor Relations tabs, disclosures/document upload structure, grievance/contact information area, and company secretary-friendly update flow.</div>
+          </div>
+          <div class="scope-row">
+            <div class="scope-step">04</div>
+            <div class="scope-name">Website Build + Setup Support</div>
+            <div class="scope-copy">Development of website pages, inquiry forms, basic SEO/indexing setup, analytics setup, testing, launch support, and assistance with domain/hosting setup. Domain and hosting costs will be paid directly by the client.</div>
+          </div>
+          <div class="scope-row">
+            <div class="scope-step">05</div>
+            <div class="scope-name">Monthly Social Media Management</div>
+            <div class="scope-copy">LinkedIn + Instagram content planning, creatives, captions, approved publishing support, and reporting as an ongoing monthly service.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="section alt" id="website-pricing">
+      <div class="container">
+        <div class="eyebrow">Website Build Pricing</div>
+        <h2>One-time website redesign and development packages.</h2>
+        <p class="lead">These prices are only for the website build. Social media management is shown separately in the next section.</p>
+
+        <div class="packages">
+          <article class="package">
+            <div class="package-top">
+              <div class="package-label">Website Essential</div>
+              <h3>Lean Corporate Website</h3>
+              <p>Best for a clean first-phase redesign with core automotive-first positioning.</p>
+              <div class="price-stack">
+                <div class="price-item">
+                  <div class="price-label">Website Build - One Time</div>
+                  <div class="price">INR 1,15,000</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="included-title">What's included</div>
+              <ul class="feature-list">
+                <li>Responsive design for mobile + desktop</li>
+                <li>Template-assisted corporate design</li>
+                <li>Homepage, About, Automotive, Diamond Legacy, IR, Helpdesk, Contact</li>
+                <li>Basic Investor Relations tabs and document sections</li>
+                <li>Contact form + business inquiry form</li>
+                <li>Basic SEO and indexing setup</li>
+                <li>Domain/hosting setup assistance; client pays domain/hosting directly</li>
+                <li>1 round of revisions</li>
+              </ul>
+            </div>
+            <div class="support-row">
+              <div class="meta-label">Free support</div>
+              <div class="meta-copy">15 days free bug fixes after launch.</div>
+            </div>
+            <button class="select-plan-btn" type="button" data-type="website" data-plan="Website Essential" data-price="INR 1,15,000">
+              Select Website Plan
+            </button>
+          </article>
+
+          <article class="package recommended">
+            <div class="package-top">
+              <div class="package-label">Website Recommended</div>
+              <h3>Corporate Website Redesign</h3>
+              <p>Best fit for the current requirement and 30-day target delivery.</p>
+              <div class="price-stack">
+                <div class="price-item">
+                  <div class="price-label">Website Build - One Time</div>
+                  <div class="price">INR 1,65,000</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="included-title">What's included</div>
+              <ul class="feature-list">
+                <li>Responsive custom UI/UX design</li>
+                <li>Automotive-first website structure</li>
+                <li>Automotive, tooling, injection moulding, IR, helpdesk and contact sections</li>
+                <li>Copywriting support from company inputs</li>
+                <li>Company secretary-friendly IR document upload structure</li>
+                <li>Contact form + business/vendor/investor inquiry structure</li>
+                <li>Basic SEO, sitemap, Search Console and GA4 setup</li>
+                <li>Domain/hosting setup assistance; client pays domain/hosting directly</li>
+                <li>2 rounds of revisions</li>
+              </ul>
+            </div>
+            <div class="support-row">
+              <div class="meta-label">Free support</div>
+              <div class="meta-copy">30 days free support + bug fixes after launch.</div>
+            </div>
+            <button class="select-plan-btn" type="button" data-type="website" data-plan="Website Recommended" data-price="INR 1,65,000">
+              Select Website Plan
+            </button>
+          </article>
+
+          <article class="package">
+            <div class="package-top">
+              <div class="package-label">Website Corporate</div>
+              <h3>Advanced Website + Company Profile</h3>
+              <p>Best for deeper content, stronger presentation, and broader execution support.</p>
+              <div class="price-stack">
+                <div class="price-item">
+                  <div class="price-label">Website Build - One Time</div>
+                  <div class="price">INR 2,50,000</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="included-title">What's included</div>
+              <ul class="feature-list">
+                <li>Responsive bespoke UI/UX design</li>
+                <li>Expanded automotive vertical presentation</li>
+                <li>Tooling + injection moulded parts content architecture</li>
+                <li>Enhanced Investor Relations structure</li>
+                <li>Admin/CMS-friendly structure for regular updates</li>
+                <li>Advanced forms and inquiry routing</li>
+                <li>Basic SEO, sitemap, schema basics, Search Console and GA4 setup</li>
+                <li>Domain/hosting setup assistance; client pays domain/hosting directly</li>
+                <li>Company profile PPT/PDF, 12-15 slides/pages</li>
+                <li>3 rounds of revisions</li>
+              </ul>
+            </div>
+            <div class="support-row">
+              <div class="meta-label">Free support</div>
+              <div class="meta-copy">2 months dedicated support + bug fixes after launch.</div>
+            </div>
+            <button class="select-plan-btn" type="button" data-type="website" data-plan="Website Corporate" data-price="INR 2,50,000">
+              Select Website Plan
+            </button>
+          </article>
+        </div>
+
+        <div class="split-note">
+          <div class="split-note-card">
+            <strong>Website fee is one-time.</strong>
+            <p>This covers website structure, design, development, setup support, testing, launch support, and included revision rounds as per the selected plan.</p>
+          </div>
+          <div class="split-note-card">
+            <strong>Domain and hosting are separate.</strong>
+            <p>Domain, hosting, premium tools, paid plugins, stock assets, photography, and videography will be paid separately by the client. We can assist with setup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="social-pricing">
+      <div class="container">
+        <div class="eyebrow">Social Media Monthly Pricing</div>
+        <h2>Separate monthly plans for LinkedIn and Instagram management.</h2>
+        <p class="lead">These are ongoing monthly charges. They are not included inside the website build price.</p>
+
+        <div class="social-grid">
+          <article class="social-card">
+            <div class="package-top">
+              <div class="package-label">Social Essential</div>
+              <h3>Basic Presence Management</h3>
+              <p>Best for starting LinkedIn and Instagram with a clean posting rhythm.</p>
+              <div class="price-stack">
+                <div class="price-item">
+                  <div class="price-label">Social Media - Monthly</div>
+                  <div class="price">INR 30,000 <small>/ month</small></div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="included-title">What's included</div>
+              <ul class="feature-list">
+                <li>LinkedIn + Instagram setup or profile optimization</li>
+                <li>Monthly content calendar</li>
+                <li>8 posts/month across LinkedIn and Instagram</li>
+                <li>Captions and basic corporate copywriting</li>
+                <li>Static creatives using approved assets</li>
+                <li>Posting support after approval</li>
+                <li>Basic monthly summary</li>
+              </ul>
+            </div>
+            <button class="select-plan-btn" type="button" data-type="social" data-plan="Social Essential" data-price="INR 30,000/month">
+              Select Social Plan
+            </button>
+          </article>
+
+          <article class="social-card recommended">
+            <div class="package-top">
+              <div class="package-label">Social Recommended</div>
+              <h3>Corporate Content Management</h3>
+              <p>Best fit for shareholder awareness, factory/process visibility, and B2B credibility.</p>
+              <div class="price-stack">
+                <div class="price-item">
+                  <div class="price-label">Social Media - Monthly</div>
+                  <div class="price">INR 45,000 <small>/ month</small></div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="included-title">What's included</div>
+              <ul class="feature-list">
+                <li>LinkedIn + Instagram setup or profile optimization</li>
+                <li>Monthly content strategy and calendar</li>
+                <li>12 posts/month across LinkedIn and Instagram</li>
+                <li>Up to 2 short reels/video edits using approved footage</li>
+                <li>Captions, hashtags, and corporate copywriting</li>
+                <li>Content themes: automotive, tooling, factory, IR-safe updates, team/culture</li>
+                <li>Posting support after approval</li>
+                <li>Monthly performance report</li>
+              </ul>
+            </div>
+            <button class="select-plan-btn" type="button" data-type="social" data-plan="Social Recommended" data-price="INR 45,000/month">
+              Select Social Plan
+            </button>
+          </article>
+
+          <article class="social-card">
+            <div class="package-top">
+              <div class="package-label">Social Corporate</div>
+              <h3>Higher-Volume Corporate Social</h3>
+              <p>Best for a stronger monthly content presence and more frequent updates.</p>
+              <div class="price-stack">
+                <div class="price-item">
+                  <div class="price-label">Social Media - Monthly</div>
+                  <div class="price">INR 60,000 <small>/ month</small></div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="included-title">What's included</div>
+              <ul class="feature-list">
+                <li>LinkedIn + Instagram setup or profile optimization</li>
+                <li>Monthly content strategy and calendar</li>
+                <li>16 posts/month across LinkedIn and Instagram</li>
+                <li>Up to 4 short reels/video edits using approved footage</li>
+                <li>Captions, hashtags, and corporate copywriting</li>
+                <li>Factory/process storytelling and stakeholder-focused posts</li>
+                <li>Monthly strategy review</li>
+                <li>Monthly performance report</li>
+              </ul>
+            </div>
+            <button class="select-plan-btn" type="button" data-type="social" data-plan="Social Corporate" data-price="INR 60,000/month">
+              Select Social Plan
+            </button>
+          </article>
+        </div>
+
+        <div class="note-box">
+          <p><strong>Social media is a monthly retainer.</strong> This includes content planning, design, captions, approvals, publishing support, and reporting every month. Paid ads, shoot costs, influencer collaborations, and ad budget are not included unless quoted separately.</p>
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="maintenance">
+      <div class="container">
+        <div class="eyebrow">Optional Maintenance Plans</div>
+        <h2>Monthly website maintenance can be selected separately after launch.</h2>
+        <p class="lead">These plans are optional. Free bug-fix support included in the selected website package will apply first.</p>
+
+        <div class="maintenance-grid">
+          <article class="maintenance-card">
+            <div class="package-label">Maintenance Basic</div>
+            <h3>For light monthly website updates</h3>
+            <div class="price" style="margin: 18px 0 22px;">INR 8,000 <small>/ month</small></div>
+            <ul class="feature-list">
+              <li>Monthly backup and technical check</li>
+              <li>Minor text/image updates</li>
+              <li>Up to 6 IR PDF/document uploads per month</li>
+              <li>Contact form testing</li>
+              <li>Basic bug fixes</li>
+              <li>Up to 2 support hours/month</li>
+            </ul>
+          </article>
+
+          <article class="maintenance-card">
+            <div class="package-label">Maintenance Plus</div>
+            <h3>For regular IR and content updates</h3>
+            <div class="price" style="margin: 18px 0 22px;">INR 15,000 <small>/ month</small></div>
+            <ul class="feature-list">
+              <li>Everything in Maintenance Basic</li>
+              <li>Up to 15 IR PDF/document uploads per month</li>
+              <li>Monthly homepage/news/content updates</li>
+              <li>Security and performance checks</li>
+              <li>GA4 traffic check and basic report</li>
+              <li>Up to 5 support hours/month</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="timeline">
+      <div class="container">
+        <div class="eyebrow">Timeline</div>
+        <h2>30-day website delivery plan.</h2>
+        <p class="lead">Timeline is subject to timely content, assets, access, and approvals from the company.</p>
+
+        <div class="timeline">
+          <div class="timeline-row">
+            <div class="timeline-period">Day 1-2</div>
+            <div class="timeline-title">Discovery & Inputs</div>
+            <div class="timeline-output">Final sitemap, content checklist, asset checklist, access checklist, and approval workflow.</div>
+          </div>
+          <div class="timeline-row">
+            <div class="timeline-period">Day 3-8</div>
+            <div class="timeline-title">Design Direction</div>
+            <div class="timeline-output">Homepage and key page design direction for review and approval.</div>
+          </div>
+          <div class="timeline-row">
+            <div class="timeline-period">Day 9-22</div>
+            <div class="timeline-title">Website Build</div>
+            <div class="timeline-output">Responsive website development, page setup, basic SEO/indexing setup, inquiry forms, and content placement.</div>
+          </div>
+          <div class="timeline-row">
+            <div class="timeline-period">Day 23-28</div>
+            <div class="timeline-title">Review & Revisions</div>
+            <div class="timeline-output">Revision rounds, content corrections, responsive testing, and technical QA.</div>
+          </div>
+          <div class="timeline-row">
+            <div class="timeline-period">Day 29-30</div>
+            <div class="timeline-title">Launch & Handover</div>
+            <div class="timeline-output">Final launch support, handover, and basic post-launch checks.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="terms">
+      <div class="container">
+        <div class="eyebrow">Terms</div>
+        <h2>Payment terms and exclusions.</h2>
+
+        <div class="terms-grid">
+          <div class="term-card">
+            <div class="kicker">Payment</div>
+            <p>50% advance to initiate website work and 50% on final approval before launch/handover. Social media management and maintenance plans are billed monthly in advance.</p>
+          </div>
+          <div class="term-card">
+            <div class="kicker">Approvals</div>
+            <p>All website copy, social media content, investor-sensitive communication, and product visuals will be published only after company approval.</p>
+          </div>
+          <div class="term-card">
+            <div class="kicker">Excluded</div>
+            <p>GST, hosting, domain, premium tools, stock assets, paid ads, photography, videography, and advanced integrations are not included unless quoted separately.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="next">
+      <div class="container two-col">
+        <div>
+          <div class="eyebrow">Next Step</div>
+          <h2>Approve a package and begin with sitemap finalisation.</h2>
+        </div>
+        <div>
+          <p class="lead">
+            Once the preferred package is confirmed, we can begin with website structure, content checklist, approval workflow, and social media setup planning.
+          </p>
+          <div class="hero-actions" style="justify-content:flex-start; margin-top: 32px;">
+            <button class="btn dark" id="bottomConfirmBtn" type="button">Confirm & Begin</button>
+            <a class="btn" href="#website-pricing">Review Pricing</a>
+            <div class="inline-error" id="bottomPlanError">Please select a plan first.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar" aria-label="Selected quotation plans">
+    <div class="cart-head">
+      <div>
+        <div class="cart-kicker">Selected Plans</div>
+        <h3>Review & schedule meeting</h3>
+      </div>
+      <button class="cart-close" id="closeCartBtn" type="button" aria-label="Close selection panel">×</button>
+    </div>
+
+    <div class="cart-body">
+      <div class="cart-item">
+        <div class="cart-item-label">Website Plan</div>
+        <div class="cart-item-title" id="selectedWebsiteName">Not selected yet</div>
+        <div class="cart-item-price" id="selectedWebsitePrice">Select any website package</div>
+      </div>
+
+      <div class="cart-item">
+        <div class="cart-item-label">Social Media Plan</div>
+        <div class="cart-item-title" id="selectedSocialName">Not selected yet</div>
+        <div class="cart-item-price" id="selectedSocialPrice">Select any social media package</div>
+      </div>
+
+      <div class="cart-total">
+        <div>
+          <div class="cart-item-label">Summary</div>
+          <div class="cart-total-note" id="cartSummary">Select one website plan and one social media plan.</div>
+          <div class="progress-wrap"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+      </div>
+
+      <div class="meeting-box">
+        <div class="cart-item-label">Schedule Next Meeting</div>
+        <div class="cart-field">
+          <label for="clientName">Name</label>
+          <input id="clientName" type="text" placeholder="Your name"/>
+        </div>
+        <div class="cart-field">
+          <label for="clientEmail">Email</label>
+          <input id="clientEmail" type="email" placeholder="Your email"/>
+        </div>
+        <div class="cart-field">
+          <label for="meetingDate">Preferred Date for Meeting</label>
+          <input id="meetingDate" type="date"/>
+        </div>
+        <div class="cart-field">
+          <label for="meetingTime">Preferred Time for Meeting</label>
+          <input id="meetingTime" type="time"/>
+        </div>
+        <div class="cart-field">
+          <label for="clientMessage">Message / Notes</label>
+          <textarea id="clientMessage" placeholder="Add any note before sending"></textarea>
+        </div>
+      </div>
+
+      <div class="cart-error" id="cartPlanError">Please select one website plan and one social media plan.</div>
+
+      <button class="send-mail-btn" id="sendMailBtn" type="button" disabled>
+        Send Selection by Email
+      </button>
+
+      <p class="cart-small-note">
+        This opens a pre-filled email draft to amanwalker9@gmail.com. To send emails automatically without opening the email app, this page needs a backend form service such as Formspree, EmailJS, or a custom server endpoint.
+      </p>
+    </div>
+  </aside>
+
+
+  <div class="toast" id="toast">Plan added to selection</div>
+
+  </div>
+
+  <div class="page-view" id="methodView">
+<section class="method-page-hero">
+    <div class="container">
+      <div class="doc-label"><span class="doc-dot"></span> Our Process</div>
+      <h1>How we will execute the website and social media work.</h1>
+      <p>This page explains the process, deliverables, review flow, coordination, and work involved behind the quotation.</p>
+    </div>
+  </section>
+
+  <section class="back-strip">
+    <div class="container">
+      <p><strong>Back to quotation:</strong> Review website pricing, social pricing, maintenance, and selected package options.</p>
+      <a class="btn dark" href="#website-pricing" data-view-target="proposal" data-scroll-target="website-pricing">Back to Quotation</a>
+    </div>
+  </section>
+
+
+
+    
+
+    <section class="section alt" id="process">
+      <div class="container">
+        <div class="eyebrow">Our Process</div>
+        <h2>How the work will be planned, built, reviewed, and launched.</h2>
+        <p class="lead">
+          This section explains the work behind the quotation. The scope is not for only page design; it covers business understanding, website structure, content planning, compliance-safe presentation, responsive development, review cycles, and launch support.
+        </p>
+
+        <div class="process-hero-panel">
+          <div>
+            <h3>What makes this different from a basic brochure website?</h3>
+            <p>
+              Zodiac JRD MKJ Ltd. needs a corporate website that explains a business transition clearly: diamond legacy in the background and automotive components as the main direction. The website also needs Investor Relations structure, business inquiry flows, responsive layouts, and content that can be approved safely for a listed company.
+            </p>
+          </div>
+          <div class="process-summary">
+            <div class="summary-pill">
+              <strong>Automotive-first communication</strong>
+              <span>The website must make tooling, injection moulded parts, manufacturing capability, and B2B credibility easy to understand.</span>
+            </div>
+            <div class="summary-pill">
+              <strong>Investor-safe structure</strong>
+              <span>Investor Relations sections, disclosures, document uploads, and public information need to be organised clearly.</span>
+            </div>
+            <div class="summary-pill">
+              <strong>Design direction selection</strong>
+              <span>We will share selected design references, layout formats, and a moodboard so the company can choose the preferred direction before full design begins.</span>
+            </div>
+            <div class="summary-pill">
+              <strong>Approval-friendly workflow</strong>
+              <span>Copy, visuals, and product/factory details will be structured so the company can review and approve before publishing.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="method-grid">
+          <article class="method-card">
+            <div>
+              <div class="method-step">Step 01</div>
+              <h3>Discovery & business mapping</h3>
+              <p>We first finalise the exact website objective, target stakeholders, automotive vertical details, diamond legacy positioning, Investor Relations needs, and content approval process.</p>
+            </div>
+          </article>
+
+          <article class="method-card">
+            <div>
+              <div class="method-step">Step 02</div>
+              <h3>Sitemap and page structure</h3>
+              <p>We prepare the website structure around Home, About, Automotive Components, Tooling, Injection Moulded Parts, Diamond Legacy, Investor Relations, Helpdesk, and Contact.</p>
+            </div>
+          </article>
+
+          <article class="method-card">
+            <div>
+              <div class="method-step">Step 03</div>
+              <h3>Content planning and copy support</h3>
+              <p>We convert company inputs into clear website copy. Product claims, facility details, customer names, capacity, and forward-looking statements will be used only after approval.</p>
+            </div>
+          </article>
+
+          <article class="method-card">
+            <div>
+              <div class="method-step">Step 04</div>
+              <h3>Design references & moodboard</h3>
+              <p>Before designing the full website, we will share selected design references, possible layout formats, colour direction, typography direction, and a moodboard so the company can clearly see the proposed visual direction.</p>
+            </div>
+          </article>
+
+          <article class="method-card">
+            <div>
+              <div class="method-step">Step 05</div>
+              <h3>Direction selection & approval</h3>
+              <p>The company will review and select the preferred design direction. Once the direction is approved, we will lock the overall style, page format, content hierarchy, and visual treatment before moving into detailed UI design.</p>
+            </div>
+          </article>
+
+          <article class="method-card">
+            <div>
+              <div class="method-step">Step 06</div>
+              <h3>Responsive UI design</h3>
+              <p>We design the website for desktop, laptop, tablet, and mobile using the approved direction. The layout will stay clean, corporate, and easy to navigate without overusing animation or decorative effects.</p>
+            </div>
+          </article>
+
+          <article class="method-card">
+            <div>
+              <div class="method-step">Step 07</div>
+              <h3>Website development</h3>
+              <p>After the design direction and key layouts are approved, we build the website pages, navigation, inquiry forms, IR sections, analytics setup, basic SEO/indexing setup, and responsive behaviour.</p>
+            </div>
+          </article>
+
+          <article class="method-card">
+            <div>
+              <div class="method-step">Step 08</div>
+              <h3>Review, testing and launch</h3>
+              <p>We test responsiveness, links, forms, content placement, page consistency, and basic performance before launch. Domain and hosting setup assistance is included; actual cost is paid by the client.</p>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top: 52px;">
+          <div class="eyebrow">Detailed Workstreams</div>
+          <h2>What the team will actually work on.</h2>
+          <p class="lead">These workstreams explain the operational effort behind the quotation and reduce ambiguity before the project begins.</p>
+        </div>
+
+
+        <div class="deliverable-table">
+          <div class="deliverable-row">
+            <div class="deliverable-name">Discovery and alignment</div>
+            <div class="deliverable-copy">We document the company’s current position, desired automotive-first direction, stakeholder groups, approval process, available assets, and content gaps before starting design.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-name">Information architecture</div>
+            <div class="deliverable-copy">We organise the website into clear sections so investors, buyers, vendors, partners, and internal teams can find the right information quickly.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-name">Automotive content planning</div>
+            <div class="deliverable-copy">We structure tooling, injection moulding, factory/process, capability, inquiry, and B2B credibility sections without making unapproved technical or commercial claims.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-name">Investor content planning</div>
+            <div class="deliverable-copy">We create a clean IR section structure for results, announcements, policies, governance, shareholding, contact, and document upload needs.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-name">Moodboard and format selection</div>
+            <div class="deliverable-copy">We share curated website references, layout formats, design moodboard, typography direction, colour usage, and section style options. The company selects the preferred direction before the final UI design starts.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-name">Design system</div>
+            <div class="deliverable-copy">We define spacing, typography, components, cards, forms, buttons, page rhythm, mobile layouts, and reusable sections so the site remains consistent.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-name">Build, QA and launch</div>
+            <div class="deliverable-copy">We build the approved pages, set up forms and analytics, test responsive behaviour, check links and content placement, and support final launch.</div>
+          </div>
+        </div>
+
+
+        <div style="margin-top: 52px;">
+          <div class="eyebrow">Deliverables</div>
+          <h2>Final deliverables included in the project scope.</h2>
+        </div>
+
+        <div class="deliverable-table">
+          <div class="deliverable-row">
+            <div class="deliverable-name">Website strategy</div>
+            <div class="deliverable-copy">Positioning, sitemap, section planning, page priority, stakeholder journey, and automotive-first communication structure.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-name">Design direction</div>
+            <div class="deliverable-copy">Curated references, layout format options, moodboard direction, and approved visual route before full UI design begins.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-name">Design and development</div>
+            <div class="deliverable-copy">Responsive UI design, website build, section layouts, forms, basic technical setup, mobile optimisation, and launch support.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-name">Investor Relations structure</div>
+            <div class="deliverable-copy">Document upload sections, public communication structure, company secretary-friendly update flow, and organised tabs for investor material.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-name">Content support</div>
+            <div class="deliverable-copy">Copy refinement from client inputs, professional wording, compliance-safe phrasing, and clear explanation of the automotive vertical.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-name">Social media planning</div>
+            <div class="deliverable-copy">LinkedIn and Instagram positioning, content calendar, approved themes, corporate captions, and monthly reporting as per selected social package.</div>
+          </div>
+        </div>
+
+        <div class="pricing-logic-grid">
+          <div class="pricing-logic-card">
+            <div class="kicker">Effort Area</div>
+            <h3>Strategy before design</h3>
+            <p>The work starts with business positioning and stakeholder clarity, not direct template editing.</p>
+          </div>
+          <div class="pricing-logic-card">
+            <div class="kicker">Effort Area</div>
+            <h3>Corporate accuracy</h3>
+            <p>The website needs careful wording because it represents a listed company and a new business direction.</p>
+          </div>
+          <div class="pricing-logic-card">
+            <div class="kicker">Effort Area</div>
+            <h3>Build and handover</h3>
+            <p>The project includes responsive build, forms, analytics, IR structure, testing, and post-launch support as per package.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+  <footer>
+    <div class="footer-logo">Zodiac Proposal<br><span>Proposal by Ireena & Aman</span></div>
+    <p>All information in this quotation is for project scoping and pricing purposes. Public-company communication, investor-related content, product visuals, and any forward-looking statements must be approved by the company before publishing.</p>
+  </footer>
+
+  
+
+
+<script>
+    const selection = {
+      website: null,
+      social: null
+    };
+
+    const cartSidebar = document.getElementById("cartSidebar");
+    const cartOverlay = document.getElementById("cartOverlay");
+    const openCartBtn = document.getElementById("openCartBtn");
+    const closeCartBtn = document.getElementById("closeCartBtn");
+    const sendMailBtn = document.getElementById("sendMailBtn");
+    const bottomConfirmBtn = document.getElementById("bottomConfirmBtn");
+    const bottomPlanError = document.getElementById("bottomPlanError");
+    const cartPlanError = document.getElementById("cartPlanError");
+
+    const selectedWebsiteName = document.getElementById("selectedWebsiteName");
+    const selectedWebsitePrice = document.getElementById("selectedWebsitePrice");
+    const selectedSocialName = document.getElementById("selectedSocialName");
+    const selectedSocialPrice = document.getElementById("selectedSocialPrice");
+    const cartSummary = document.getElementById("cartSummary");
+    const progressFill = document.getElementById("progressFill");
+    const toast = document.getElementById("toast");
+
+    function updateNavShadow() {
+      document.querySelector("nav").classList.toggle("scrolled", window.scrollY > 10);
+    }
+    window.addEventListener("scroll", updateNavShadow);
+    updateNavShadow();
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => toast.classList.remove("show"), 1700);
+    }
+
+    function pulseCart() {
+      cartSidebar.classList.remove("cart-added-pulse");
+      void cartSidebar.offsetWidth;
+      cartSidebar.classList.add("cart-added-pulse");
+    }
+
+    function openCart() {
+      cartSidebar.classList.add("open");
+      cartOverlay.classList.add("open");
+    }
+
+    function closeCart() {
+      cartSidebar.classList.remove("open");
+      cartOverlay.classList.remove("open");
+    }
+
+    function updateCart() {
+      if (selection.website) {
+        selectedWebsiteName.textContent = selection.website.plan;
+        selectedWebsitePrice.textContent = selection.website.price + " one-time";
+      } else {
+        selectedWebsiteName.textContent = "Not selected yet";
+        selectedWebsitePrice.textContent = "Select any website package";
+      }
+
+      if (selection.social) {
+        selectedSocialName.textContent = selection.social.plan;
+        selectedSocialPrice.textContent = selection.social.price;
+      } else {
+        selectedSocialName.textContent = "Not selected yet";
+        selectedSocialPrice.textContent = "Select any social media package";
+      }
+
+      const selectedCount = (selection.website ? 1 : 0) + (selection.social ? 1 : 0);
+      progressFill.style.width = selectedCount === 0 ? "0%" : selectedCount === 1 ? "50%" : "100%";
+
+      if (selection.website && selection.social) {
+        cartSummary.textContent = selection.website.price + " one-time website build + " + selection.social.price + " social media management.";
+        sendMailBtn.disabled = false;
+        if (bottomPlanError) bottomPlanError.classList.remove("show");
+        if (cartPlanError) cartPlanError.classList.remove("show");
+      } else if (selection.website) {
+        cartSummary.textContent = "Website plan selected. Now select one social media plan.";
+        sendMailBtn.disabled = true;
+      } else if (selection.social) {
+        cartSummary.textContent = "Social media plan selected. Now select one website plan.";
+        sendMailBtn.disabled = true;
+      } else {
+        cartSummary.textContent = "Select one website plan and one social media plan.";
+        sendMailBtn.disabled = true;
+      }
+    }
+
+    function clearSelectedButtons(type) {
+      document.querySelectorAll('.select-plan-btn[data-type="' + type + '"]').forEach(button => {
+        button.classList.remove("selected");
+        button.textContent = type === "website" ? "Select Website Plan" : "Select Social Plan";
+      });
+    }
+
+    document.querySelectorAll(".select-plan-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const type = button.dataset.type;
+        const plan = button.dataset.plan;
+        const price = button.dataset.price;
+
+        selection[type] = { plan, price };
+        if (bottomPlanError) bottomPlanError.classList.remove("show");
+        if (cartPlanError) cartPlanError.classList.remove("show");
+
+        clearSelectedButtons(type);
+        button.classList.add("selected");
+        button.textContent = "Selected";
+
+        updateCart();
+        openCart();
+        pulseCart();
+        showToast(type === "website" ? "Website plan added. Choose a social plan next." : "Social plan added. Ready to schedule meeting.");
+
+        if (type === "website") {
+          setTimeout(() => {
+            closeCart();
+            document.getElementById("social-pricing").scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 1100);
+        }
+      });
+    });
+
+    openCartBtn.addEventListener("click", openCart);
+    closeCartBtn.addEventListener("click", closeCart);
+    cartOverlay.addEventListener("click", closeCart);
+
+    
+    if (bottomConfirmBtn) {
+      bottomConfirmBtn.addEventListener("click", () => {
+        openCart();
+
+        if (!selection.website || !selection.social) {
+          if (bottomPlanError) {
+            bottomPlanError.textContent = "Please select a plan first.";
+            bottomPlanError.classList.add("show");
+          }
+
+          if (cartPlanError) {
+            cartPlanError.textContent = "Please select one website plan and one social media plan.";
+            cartPlanError.classList.add("show");
+          }
+
+          showToast("Please select website and social plans first.");
+          return;
+        }
+
+        if (bottomPlanError) bottomPlanError.classList.remove("show");
+        if (cartPlanError) cartPlanError.classList.remove("show");
+        showToast("Plans selected. Add meeting details and send email.");
+      });
+    }
+
+
+    sendMailBtn.addEventListener("click", () => {
+      if (!selection.website || !selection.social) {
+        if (cartPlanError) cartPlanError.classList.add("show");
+        showToast("Please select website and social plans first.");
+        return;
+      }
+
+      const clientName = document.getElementById("clientName").value.trim();
+      const clientEmail = document.getElementById("clientEmail").value.trim();
+      const meetingDate = document.getElementById("meetingDate").value;
+      const meetingTime = document.getElementById("meetingTime").value;
+      const clientMessage = document.getElementById("clientMessage").value.trim();
+
+      const subject = "Zodiac Proposal Selection - " + selection.website.plan + " + " + selection.social.plan;
+
+      const body = [
+        "Selected Website Plan: " + selection.website.plan,
+        "Website Price: " + selection.website.price + " one-time",
+        "",
+        "Selected Social Media Plan: " + selection.social.plan,
+        "Social Media Price: " + selection.social.price,
+        "",
+        "Preferred Meeting Date: " + (meetingDate || "Not provided"),
+        "Preferred Meeting Time: " + (meetingTime || "Not provided"),
+        "",
+        "Client Name: " + (clientName || "Not provided"),
+        "Client Email: " + (clientEmail || "Not provided"),
+        "",
+        "Message / Notes:",
+        clientMessage || "No message added.",
+        "",
+        "Note: Domain, hosting, paid ads, photoshoot, videoshoot, premium tools, GST and third-party costs are separate unless specifically included."
+      ].join("\\n");
+
+      const mailto = "mailto:amanwalker9@gmail.com"
+        + "?subject=" + encodeURIComponent(subject)
+        + "&body=" + encodeURIComponent(body);
+
+      window.location.href = mailto;
+    });
+
+    updateCart();
+  
+    function showView(viewName, scrollTarget) {
+      const proposalView = document.getElementById("proposalView");
+      const methodView = document.getElementById("methodView");
+
+      if (viewName === "method") {
+        proposalView.classList.remove("active");
+        methodView.classList.add("active");
+        history.pushState(null, "", "#project-method");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        methodView.classList.remove("active");
+        proposalView.classList.add("active");
+        const hash = scrollTarget ? "#" + scrollTarget : "#top";
+        history.pushState(null, "", hash);
+        setTimeout(() => {
+          const el = document.getElementById(scrollTarget || "top");
+          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+          else window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 40);
+      }
+    }
+
+    document.querySelectorAll("[data-view-target]").forEach(link => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        showView(link.dataset.viewTarget, link.dataset.scrollTarget || null);
+      });
+    });
+
+    function routeFromHash() {
+      if (window.location.hash === "#project-method") {
+        showView("method", null);
+      } else {
+        const id = window.location.hash ? window.location.hash.replace("#", "") : "top";
+        showView("proposal", id);
+      }
+    }
+
+    window.addEventListener("popstate", routeFromHash);
+
+    if (window.location.hash === "#project-method") {
+      document.getElementById("proposalView").classList.remove("active");
+      document.getElementById("methodView").classList.add("active");
+      window.scrollTo(0, 0);
+    }
+
+  </script>
+
+
+
+  <script>
+    (function () {
+      const overlay = document.getElementById("securityOverlay");
+
+      function showSecurityOverlay(duration = 1800) {
+        overlay.classList.add("show");
+        clearTimeout(window.__securityOverlayTimer);
+        window.__securityOverlayTimer = setTimeout(() => {
+          overlay.classList.remove("show");
+        }, duration);
+      }
+
+      // Disable right click / context menu.
+      document.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+        showSecurityOverlay();
+      });
+
+      // Disable copy/cut/save/print/source/devtools shortcuts for casual users.
+      document.addEventListener("keydown", function (event) {
+        const key = event.key.toLowerCase();
+        const blocked =
+          event.key === "F12" ||
+          (event.ctrlKey && event.shiftKey && ["i", "j", "c"].includes(key)) ||
+          (event.metaKey && event.altKey && ["i", "j", "c"].includes(key)) ||
+          ((event.ctrlKey || event.metaKey) && ["u", "s", "p", "c", "x", "a"].includes(key));
+
+        if (blocked) {
+          event.preventDefault();
+          event.stopPropagation();
+          showSecurityOverlay();
+          return false;
+        }
+
+        // Attempt to react to Print Screen. Browsers cannot reliably block screenshots.
+        if (event.key === "PrintScreen") {
+          showSecurityOverlay(2500);
+        }
+      }, true);
+
+      // Disable drag/select actions.
+      document.addEventListener("dragstart", function (event) {
+        event.preventDefault();
+      });
+
+      document.addEventListener("selectstart", function (event) {
+        event.preventDefault();
+      });
+
+      // Blur content when tab/window loses focus, reducing casual screen capture risk.
+      window.addEventListener("blur", function () {
+        document.body.style.filter = "blur(8px)";
+      });
+
+      window.addEventListener("focus", function () {
+        document.body.style.filter = "none";
+      });
+
+      // Basic devtools-size heuristic. Not bulletproof, only a deterrent.
+      setInterval(function () {
+        const threshold = 170;
+        const widthDiff = window.outerWidth - window.innerWidth;
+        const heightDiff = window.outerHeight - window.innerHeight;
+        if (widthDiff > threshold || heightDiff > threshold) {
+          showSecurityOverlay(2200);
+        }
+      }, 1200);
+    })();
+  </script>
+
+</body>
+</html>
